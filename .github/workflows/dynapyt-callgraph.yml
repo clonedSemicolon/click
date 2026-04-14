@@ -27,7 +27,7 @@ jobs:
 
       - name: Install project dependencies
         run: |
-          pip install -r "requirements/tests.txt"
+          pip install pytest
           if [ -f pyproject.toml ] || [ -f setup.py ] || [ -f setup.cfg ]; then
             pip install -e ".[dev,test,tests]" 2>/dev/null || pip install -e "." 2>/dev/null || true
           fi
